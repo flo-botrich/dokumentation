@@ -1,0 +1,154 @@
+# Hello World
+
+Folgen Sie dieser Hello World Übung, um GitHub's Pull-Anforderungsworkflow kennenzulernen.
+
+## Einführung
+
+In diesem Tutorial werden GitHub-Grundlagen wie Repositorys, Branches, Commits und Pull Requests behandelt. Sie erstellen ein eigenes Hello World Repository und lernen den GitHub Pull-Request-Workflow kennen, eine beliebte Methode zur Erstellung und Überprüfung von Code.
+
+In diesem Schnellstart-Leitfaden werden Sie:
+
+* Erstellen und Verwenden eines Repositorys.
+* Das Beginnen und Verwalten einer neuen Zweigstelle.
+* Änderungen an einer Datei vornehmen und diese als Commits an GitHub übertragen.
+* Öffnen und Zusammenführen einer Pull-Anfrage.
+
+### Voraussetzungen
+
+* Du musst ein GitHub-Konto besitzen. Weitere Informationen findest du unter [Erstellen eines Kontos auf GitHub](/de/get-started/start-your-journey/creating-an-account-on-github).
+
+* Du benötigst keine Kenntnisse im Programmieren oder im Umgang mit der Befehlszeile. Auch eine Installation von Git (Versionskontrollsoftware, auf der GitHub basiert) ist nicht erforderlich.
+
+## Schritt 1: Erstellen eines Repositorys
+
+Als Erstes erstellen wir ein Repository. Sie können sich ein Repository als Ordner vorstellen, der verwandte Elemente enthält, z. B. Dateien, Bilder, Videos oder sogar andere Ordner. Ein Repository gruppiert in der Regel Elemente, die zum gleichen „Projekt“ gehören oder an dem Sie gerade arbeiten.
+
+Häufig enthalten Repositorys eine README-Datei. Dabei handelt es sich um eine Datei mit Informationen zu deinem Projekt. Infodateien sind in Markdown geschrieben, einer leicht lesbaren und einfach zu schreibenden Sprache zur Formatierung von einfachem Text. Im nächsten Tutorial, [Einrichten deines Profils](/de/get-started/start-your-journey/setting-up-your-profile), erfährst du mehr über Markdown.
+
+Auf GitHub kannst du eine README-Datei hinzufügen, während du ein neues Repository erstellst. Auf GitHub gibt es auch andere gängige Optionen, zum Beispiel eine Lizenzdatei, aber du musst keine davon jetzt auswählen.
+
+In deinem `hello-world`-Repository kannst du Ideen und Ressourcen speichern, für andere freigeben und sich mit anderen austauschen.
+
+1. Wähle in der rechten oberen Ecke einer beliebigen Seite <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-plus" aria-label="Create something new" role="img"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path></svg>, und klicke dann auf **Neues Repository**.
+
+   ![Screenshot eines GitHub-Dropdownmenüs mit Optionen zum Erstellen neuer Elemente. Das Menüelement „Neues Repository“ ist in dunklem Orange eingerahmt.](/assets/images/help/repository/repo-create-global-nav-update.png)
+2. Gib `hello-world` in das Feld „Repositoryname“ ein.
+3. Gib im Feld „Beschreibung“ eine kurze Beschreibung ein. Geben Sie zum Beispiel Folgendes ein: „Dieses Repository dient zum Üben des GitHub-Flows.“
+4. Wähle die Option **Öffentlich** oder **Privat** für dein Repository aus.
+5. Wähle **README-Datei hinzufügen** aus.
+6. Klicke auf **Repository erstellen**.
+
+## Schritt 2: Erstellen eines Zweigs
+
+Mithilfe von Branching kannst du verschiedene Versionen eines Repositorys gleichzeitig verwalten.
+
+Standardmäßig verfügt dein Repository über einen Branch mit dem Namen `main`, der als maßgeblicher Branch betrachtet wird. Basierend auf `main` kannst du zusätzliche Branches in deinem Repository erstellen.
+
+Verzweigungen sind hilfreich, wenn Sie einem Projekt neue Funktionen hinzufügen möchten, ohne den Hauptcode zu ändern. Die an den anderen Branches vorgenommenen Änderungen werden erst in den Mainbranch aufgenommen, wenn du diese mergst. Dieses Thema wird später in diesem Leitfaden behandelt. Du kannst Branches verwendest, um Experimente und Änderungen vorzunehmen, bevor du diese an `main` committest.
+
+Wenn du einen Branch aus `main` erstellst, handelt es sich um eine Kopie bzw. Momentaufnahme von `main` zum jeweiligen Zeitpunkt. Wenn eine andere Person Änderungen an `main` vornimmt, während du an deinem Branch arbeitest, könntest du diese Updates pullen.
+
+Dieses Diagramm zeigt:
+
+* Der Zweig `main`
+* Ein neuer Zweig namens `feature`
+* Der Prozess, den `feature` durchläuft, um die Phasen „Änderungen übernehmen“, „Pull-Anfrage einreichen“ und „Vorgeschlagene Änderungen diskutieren“ zu durchlaufen, bevor er in `main` zusammengeführt wird
+
+![Abbildung der beiden Branches. Der „feature“-Branch verzweigt sich vom „main“-Branch und wird dann wieder mit dem „main“-Branch zusammengeführt.](/assets/images/help/repository/branching.png)
+
+### Einen Zweig erstellen
+
+1. Klicke auf die Registerkarte **Code** deines `hello-world`-Repositorys.
+
+2. Klicke oberhalb der Dateiliste auf das Dropdownmenü **main**.
+
+   ![Screenshot der Repositoryseite. Ein Dropdownmenü mit einem Branchsymbol und der Bezeichnung „main“ ist mit einem orangefarbenen Rahmen hervorgehoben.](/assets/images/help/branches/branch-selection-dropdown-global-nav-update.png)
+
+3. Gib den Branchnamen `readme-edits` in das Textfeld ein.
+
+4. Klicke auf **Branch erstellen: readme-edits aus main**.
+
+   ![Screenshot des Dropdownmenüs „Branch“ für ein Repository. „Branch erstellen: readme-edits aus 'Standard'“ ist dunkelorange umrandet.](/assets/images/help/repository/new-branch.png)
+
+Jetzt hast du die beiden Branches `main` und `readme-edits`. Derzeit sehen sie genau gleich aus. Nehmen Sie nun Änderungen am neuen `readme-edits`-Branch vor.
+
+## Schritt 3: Änderungen vornehmen und bestätigen
+
+Als du im vorherigen Schritt einen neuen Branch erstellt hast, hat GitHub dich zur Codepage für den neuen Branch `readme-edits` gebracht, der eine Kopie von `main` ist.
+
+Du kannst Änderungen an den Dateien im Repository vornehmen und speichern. Gespeicherte Änderungen auf GitHub werden als Commits bezeichnet. Jeder Commit hat eine zugehörige Commitnachricht, die als Erklärung dient, warum eine bestimmte Änderung vorgenommen wurde. Commitnachrichten erfassen den Verlauf deiner Änderungen, damit andere Mitwirkende nachvollziehen können, was du getan hast und warum.
+
+1. Klicken Sie unter dem erstellten `readme-edits`-Branch auf die Datei `README.md`.
+2. Wähle <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-pencil" aria-label="Edit file" role="img"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg> aus, um die Datei zu bearbeiten.
+3. Gib im Editor eine kurze Information zu deiner Person an.
+4. Klicke auf **Änderungen übernehmen**.
+5. Geben Sie im Feld „Änderungen übernehmen“ eine Nachricht ein, die Ihre Änderungen beschreibt.
+6. Klicke auf **Änderungen übernehmen**.
+
+Diese Änderungen werden nur an der README-Datei in deinem `readme-edits`-Branch vorgenommen, sodass dieser nun einen anderen Inhalt als `main` hat.
+
+## Schritt 4: Öffnen eines Pull Requests
+
+Nachdem du nun Änderungen in einem aus `main` erstellten Branch vorgenommen hast, kannst du einen Pull Request öffnen.
+
+Pull Requests sind das Herzstück der Zusammenarbeit auf GitHub. Wenn du einen Pull Request öffnest, schlage deine Änderungen vor und beantrage ein Review. Der oder die Reviewer\*in pullt deinen Beitrag und mergt diesen mit seinem oder ihrem Branch. Pull Requests heben die Unterschiede zwischen dem Inhalt beider Branches hervor. Die geänderten, ergänzten und entfernten Inhalte werden in verschiedenen Farben angezeigt.
+
+Sobald du einen Commit vornimmst, kannst du einen Pull Request öffnen und eine Diskussion anstoßen, auch wenn der Code noch nicht fertig ist.
+
+In diesem Schritt öffnen Sie einen Pull Request in Ihrem eigenen Repository und führen ihn dann selbst zusammen. Dies ist eine gute Möglichkeit, den Ablauf von GitHub zu üben, bevor du an größeren Projekten arbeitest.
+
+1. Klicke auf die Registerkarte **Pull Requests** deines `hello-world`-Repositorys.
+
+2. Klicke auf **Neuer Pull Request**.
+
+3. Wähle im Feld **Beispielvergleiche** den von dir erstellten Branch `readme-edits` aus, der mit `main` (dem Original) verglichen werden soll.
+
+4. Überprüfe deine als Unterschiede dargestellten Änderungen auf der Seite „Vergleich“, um sich zu vergewissern, dass du diese Änderungen übermitteln möchtest.
+
+   ![Screenshot eines Diffs für die Datei „README.md“. 3 rote Zeilen enthalten den Text, der entfernt wird, und 3 grüne Linien enthalten den hinzugefügten Text.](/assets/images/help/repository/diffs.png)
+
+5. Klicken Sie auf **Pull Request erstellen**.
+
+6. Gib einen Titel für deinen Pull Request und eine kurze Beschreibung deiner Änderungen ein. Du kannst Emojis einfügen und Bilder sowie GIFs ziehen und ablegen.
+
+7. Klicken Sie auf **Pull Request erstellen**.
+
+### Überprüfen einer Pull-Anfrage
+
+Wenn Sie anfangen, mit anderen zusammenzuarbeiten, ist dies der Zeitpunkt, an dem Sie sie um eine Bewertung bitten. Dies ermöglicht es Ihren Projektmitarbeitern, Ihre Pull Request zu kommentieren oder Änderungen vorzuschlagen, bevor Sie die Änderungen in die `main`-Verzweigung zusammenführen.
+
+In diesem Tutorial wird das Überprüfen von Pull Requests nicht behandelt, aber wenn du mehr erfahren möchtest, findest du weitere Informationen unter [Informationen zu Pull-Request-Reviews](/de/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews). Alternativ können Sie auch den Kurs [GitHub Skills](https://skills.github.com/) „Überprüfen von Pull Requests“ testen.
+
+## Schritt 5: Führen Sie Ihren Pull Request zusammen
+
+Im letzten Schritt führst du deinen `readme-edits`-Branch in den `main`-Branch zusammen. Nach dem Mergen deines Pull Request werden die Änderungen am `readme-edits`-Branch in `main` integriert.
+
+Manchmal führen die Codeänderungen durch den Pull Request zu Konflikten mit dem bestehenden Code in `main`. Falls Codekonflikte auftreten, zeigt GitHub eine Warnung an und verhindert den Mergevorgang, bis die Konflikte behoben sind. Du kannst die Konflikte mit einem Commit beheben oder Kommentare im Pull Request erstellen, um diese mit Teammitgliedern zu besprechen.
+
+In dieser exemplarische Vorgehensweise sollten keine Konflikte vorhanden sein. Du bist also bereit, deinen Branch mit dem Mainbranch zu mergen.
+
+1. Wähle unten im Pull Request **Pull Request zusammenführen** aus, um die Änderungen in `main` zusammenzuführen.
+2. Klicke auf **Merge bestätigen**. Sie erhalten eine Nachricht, dass die Anfrage erfolgreich zusammengeführt und geschlossen wurde.
+3. Klicke auf **Branch löschen**. Da dein Pull Request gemergt wurde und deine Änderungen in `main` gespeichert sind, kannst du den `readme-edits`-Branch bedenkenlos löschen. Wenn du weitere Änderungen an deinem Projekt vornehmen möchtest, kannst du jederzeit einen neuen Branch erstellen und diesen Vorgang wiederholen.
+4. Klicken Sie auf die Registerkarte **Code** in Ihrem `hello-world`-Repository, um Ihre veröffentlichten Änderungen an `main` zu sehen.
+
+## Zusammenfassung
+
+In diesem Tutorial hast du gelernt, wie du auf GitHub ein Projekt und einen Pull Request erstellst.
+
+Als Teil davon haben wir Folgendes gelernt:
+
+* Erstellen eines Repositorys.
+* Das Beginnen und Verwalten einer neuen Zweigstelle.
+* Ändere eine Datei und committe die Änderungen auf GitHub.
+* Öffnen und Zusammenführen einer Pull-Anfrage.
+
+## Nächste Schritte
+
+* Besuche nun dein GitHub-Profil. Dort siehst du, dass deine Aktivitäten auf dem Beitragsdiagramm reflektiert werden.
+* Wenn Sie das in diesem Tutorial Gelernte noch einmal üben möchten, versuchen Sie den [GitHub Skills](https://skills.github.com/)-Kurs „Einführung in GitHub“.
+* Im nächsten Tutorial, [Einrichten deines Profils](/de/get-started/start-your-journey/setting-up-your-profile), erfährst du, wie du dein Profil personalisieren kannst sowie auch grundlegende Markdownsyntax für das Schreiben in GitHub.
+
+## Weiterführende Lektüre
+
+* [GitHub Flow](/de/get-started/using-github/github-flow)
